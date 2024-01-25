@@ -1,7 +1,7 @@
 ﻿using API.Data.Models;
 namespace API.Services
 {
-    public interface ICategoryState
+    public interface ICategoryStateService
     {
         IQueryable<CategoryState> ListCategoryStates();
     }
