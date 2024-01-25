@@ -1,6 +1,6 @@
 ﻿using API.Data;
 using API.Data.Models;
-namespace API.Services.CategoryService
+namespace API.Services
 {
     public class CategoryService : ICategoryService
     {
