@@ -1,0 +1,91 @@
+﻿using API.Data.Models;
+using API.DataTransferObjects;
+using API.Services;
+using AutoMapper;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+
+namespace API.Controllers
+{
+    [Route("api/products")]
+    [ApiController]
+    public class ProductController : ControllerBase
+    {
+        private readonly IMapper _mapper;
+        private readonly IProductService _productService;
+        public ProductController(IMapper mapper, IProductService productService)
+        {
+            this._mapper = mapper;
+            this._productService = productService;
+        }
+        [HttpGet]
+        public async Task<ActionResult<APIResponse>> ListProducts()
+        {
+            List<Product> list = await this._productService.ListProducts()
+                                    .OrderBy(p => p.Name)
+                                    .ThenBy(p => p.Price)
+                                    .ToListAsync();
+            APIResponse response = new APIResponse()
+            {
+                Data = list.Select(p => this._mapper.Map<Product, GetProductDTO>(p))
+            };
+            return response;
+        }
+
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<ActionResult<APIResponse>> FindProduct(int id)
+        {
+            Product? product = await this._productService.FindProduct(id);
+            if (product == null)
+            {
+                return HttpErrors.NotFound("El producto no existe en el sistema");
+            }
+            APIResponse response = new()
+            {
+                Data = this._mapper.Map<Product, GetProductDTO>(product)
+            };
+            return response;
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<APIResponse>> InsertProduct(InsertUpdateProductDTO data)
+        {
+            APIResponse response = new();
+            Product? product = this._mapper.Map<InsertUpdateProductDTO, Product>(data);
+            await this._productService.InsertProduct(product);
+            response.Data = this._mapper.Map<Product, GetProductDTO>(product);
+            response.Messages.Add("El producto ha sido insertado");
+            return response;
+        }
+
+        [HttpPut]
+        [Route("{id}")]
+        public async Task<ActionResult<APIResponse>> UpdateProduct(int id, InsertUpdateProductDTO data)
+        {
+            Product? product = await this._productService.FindProduct(id);
+            if (product == null) { return HttpErrors.NotFound("El producto no existe en el sistema"); }
+            APIResponse response = new();
+            this._mapper.Map(data, product);
+            await this._productService.UpdateProduct(product);
+            response.Data = this._mapper.Map<Product, GetProductDTO>(product);
+            response.Messages.Add("El producto ha sido actualizado");
+            return response;
+        }
+
+        [HttpDelete]
+        [Route("{id}")]
+        public async Task<ActionResult<APIResponse>> DeleteProduct(int id)
+        {
+            Product? product = await this._productService.FindProduct(id);
+            if (product == null) { return HttpErrors.NotFound("El producto no existe en el sistema"); }
+            APIResponse response = new();
+            await this._productService.DeleteProduct(product);
+            response.Data = this._mapper.Map<Product, GetProductDTO>(product);
+            response.Messages.Add("El producto ha sido borrado");
+            return response;
+        }
+    }
+}
