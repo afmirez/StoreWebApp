@@ -2,7 +2,7 @@
 using API.Data.Models;
 namespace API.Services
 {
-    public class CategoryStateService : ICategoryState
+    public class CategoryStateService : ICategoryStateService
     {
         private readonly StoreDB _database;
         public CategoryStateService(StoreDB database)
