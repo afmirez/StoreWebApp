@@ -1,7 +1,9 @@
 ﻿using API.Data;
+using API.Data.Filters;
 using API.Data.Models;
 using Microsoft.EntityFrameworkCore;
 namespace API.Services
+
 {
     public class ProductService : IProductService
     {
@@ -10,18 +12,32 @@ namespace API.Services
         {
             this._database = database;
         }
-        public IQueryable<Product> ListProducts()
+        public IQueryable<Product> ListProducts(ProductListFilter? filter = null)
         {
+            filter ??= new ProductListFilter();
+            if (filter.Name != null)
+            {
+                Console.WriteLine("Holaa");
+
+            }
             return this._database
                     .Product
                     .Include(p => p.Category)
-                    .Include(p => p.ProductState);
+                                    .ThenInclude(c => c.CategoryState)
+                    .Include(p => p.ProductState)
+                    .Where(p => (string.IsNullOrWhiteSpace(filter.Name) || p.Name.Contains(filter.Name))
+                                && (!filter.PriceFrom.HasValue || p.Price >= filter.PriceFrom)
+                                && (!filter.PriceTo.HasValue || p.Price <= filter.PriceTo)
+                                && (!filter.CategoryId.HasValue || p.CategoryId == filter.CategoryId)
+                                && (!filter.ProductStateId.HasValue || p.ProductStateId == filter.ProductStateId));
         }
+
         public async Task<Product?> FindProduct(int id)
         {
             return await this._database
                     .Product
                     .Include(p => p.Category)
+                                    .ThenInclude(c => c.CategoryState)
                     .Include(p => p.ProductState)
                     .Where(p => p.Id == id)
                     .FirstOrDefaultAsync();

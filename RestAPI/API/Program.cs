@@ -1,6 +1,7 @@
 using API;
 using API.Data;
 using API.Services;
+using API.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers()
@@ -16,9 +17,9 @@ builder.Services.AddDbContext<StoreDB>();
 
 //SERVICES
 builder.Services.AddScoped<IProductService, ProductService>();
-builder.Services.AddScoped<IProductStateService, ProductStateService>();
 
 //VALIDATORS
+builder.Services.AddScoped<IProductValidator, ProductValidator>();
 
 var app = builder.Build();
 app.UseHttpsRedirection();
