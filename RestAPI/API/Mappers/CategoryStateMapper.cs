@@ -5,7 +5,7 @@ namespace API.Mappers
 {
     public class CategoryStateMapper : Profile
     {
-        public CategoryStateMapper() 
+        public CategoryStateMapper()
         {
             CreateMap<CategoryState, GetCategoryStateDTO>();
         }

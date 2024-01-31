@@ -1,9 +1,10 @@
-﻿using API.Data.Models;
+﻿using API.Data.Filters;
+using API.Data.Models;
 namespace API.Services
 {
     public interface IProductService
     {
-        IQueryable<Product> ListProducts();
+        IQueryable<Product> ListProducts(ProductListFilter? filter = null);
         Task<Product?> FindProduct(int id);
         Task InsertProduct(Product entity);
         Task UpdateProduct(Product entity);
