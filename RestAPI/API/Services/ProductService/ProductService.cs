@@ -15,11 +15,7 @@ namespace API.Services
         public IQueryable<Product> ListProducts(ProductListFilter? filter = null)
         {
             filter ??= new ProductListFilter();
-            if (filter.Name != null)
-            {
-                Console.WriteLine("Holaa");
-
-            }
+ 
             return this._database
                     .Product
                     .Include(p => p.Category)

@@ -6,7 +6,7 @@ namespace API.Mappers
 {
     public class ProductStateMapper : Profile
     {
-        public ProductStateMapper() 
+        public ProductStateMapper()
         {
             CreateMap<ProductState, GetProductStateDTO>();
         }

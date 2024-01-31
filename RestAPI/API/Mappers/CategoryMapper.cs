@@ -5,7 +5,7 @@ namespace API.Mappers
 {
     public class CategoryMapper : Profile
     {
-        public CategoryMapper() 
+        public CategoryMapper()
         {
             CreateMap<Category, GetCategoryDTO>();
         }
