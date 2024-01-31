@@ -8,6 +8,5 @@ namespace API.Services
         Task<Product?> FindProduct(int id);
         Task InsertProduct(Product entity);
         Task UpdateProduct(Product entity);
-        Task DeleteProduct(Product entity);
     }
 }

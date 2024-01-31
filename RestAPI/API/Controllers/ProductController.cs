@@ -89,18 +89,5 @@ namespace API.Controllers
             }
             return response;
         }
-
-        [HttpDelete]
-        [Route("{id}")]
-        public async Task<ActionResult<APIResponse>> DeleteProduct(int id)
-        {
-            Product? product = await this._productService.FindProduct(id);
-            if (product == null) { return HttpErrors.NotFound("El producto no existe en el sistema"); }
-            APIResponse response = new();
-            await this._productService.DeleteProduct(product);
-            response.Data = this._mapper.Map<Product, GetProductDTO>(product);
-            response.Messages.Add("El producto ha sido borrado");
-            return response;
-        }
     }
 }

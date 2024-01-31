@@ -52,10 +52,5 @@ namespace API.Services
             await this._database.Entry(entity).Reference(p => p.Category).LoadAsync();
             await this._database.Entry(entity).Reference(p => p.ProductState).LoadAsync();
         }
-        public async Task DeleteProduct(Product entity)
-        {
-            this._database.Product.Remove(entity);
-            await this._database.SaveChangesAsync();
-        }
     }
 }
