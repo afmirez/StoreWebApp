@@ -1,4 +1,5 @@
 ﻿using API.Data;
+using API.Data.Filters;
 using API.Data.Models;
 using Microsoft.EntityFrameworkCore;
 namespace API.Services
@@ -10,10 +11,16 @@ namespace API.Services
         {
             this._database = database;
         }
-        public IQueryable<Purchase> ListPurchases()
+        public IQueryable<Purchase> ListPurchases(PurchaseListFilter? filter = null)
         {
+            filter ??= new PurchaseListFilter();
+
             return this._database
-                    .Purchase;
+                    .Purchase
+                    .Where(p => (!filter.DateFrom.HasValue || p.Date >= filter.DateFrom)
+                                    && (!filter.DateTo.HasValue || p.Date <= filter.DateTo)
+                                    && (!filter.TotalFrom.HasValue || p.Total >= filter.TotalFrom)
+                                    && (!filter.TotalTo.HasValue || p.Total <= filter.TotalTo));
         }
 
         public async Task InsertPurchaseProducts(Purchase PurchaseEntity, List<PurchaseProduct> PurchaseProductEntities)

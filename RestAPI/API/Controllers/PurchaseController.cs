@@ -1,4 +1,5 @@
-﻿using API.Data.Models;
+﻿using API.Data.Filters;
+using API.Data.Models;
 using API.DataTransferObjects;
 using API.Services;
 using API.Validators;
@@ -26,11 +27,14 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<APIResponse>> ListPurchases()
+        public async Task<ActionResult<APIResponse>> ListPurchases([FromQuery] FilterPurchaseDTO data)
         {
-            List<Purchase > list = await this._purchaseService.ListPurchases()
+            PurchaseListFilter filter = this._mapper.Map<FilterPurchaseDTO, PurchaseListFilter>(data);
+
+            List<Purchase> list = await this._purchaseService.ListPurchases(filter)
                                     .OrderBy(p => p.Id)
                                     .ToListAsync();
+
             APIResponse response = new APIResponse()
             {
                 Data = list.Select(p => this._mapper.Map<Purchase, GetPurchaseDTO>(p))
