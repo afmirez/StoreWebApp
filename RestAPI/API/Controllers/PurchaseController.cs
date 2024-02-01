@@ -21,7 +21,7 @@ namespace API.Controllers
             this._purchaseService = purchaseService;
         }
         [HttpGet]
-        public async Task<ActionResult<APIResponse>> ListPurchase()
+        public async Task<ActionResult<APIResponse>> ListPurchases()
         {
             List<Purchase > list = await this._purchaseService.ListPurchases()
                                     .OrderBy(p => p.Id)
@@ -32,5 +32,7 @@ namespace API.Controllers
             };
             return response;
         }
+
+
     }
 }
