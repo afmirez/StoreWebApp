@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\004483659\\Desktop\\CodeMindsStoreApp\\RestAPI\\API\\API.csproj": {}
+    "C:\\Users\\AMD\\Desktop\\test\\StoreWebApp\\RestAPI\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\004483659\\Desktop\\CodeMindsStoreApp\\RestAPI\\API\\API.csproj": {
+    "C:\\Users\\AMD\\Desktop\\test\\StoreWebApp\\RestAPI\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\004483659\\Desktop\\CodeMindsStoreApp\\RestAPI\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\AMD\\Desktop\\test\\StoreWebApp\\RestAPI\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\004483659\\Desktop\\CodeMindsStoreApp\\RestAPI\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\004483659\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\004483659\\Desktop\\CodeMindsStoreApp\\RestAPI\\API\\obj\\",
+        "projectPath": "C:\\Users\\AMD\\Desktop\\test\\StoreWebApp\\RestAPI\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\AMD\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AMD\\Desktop\\test\\StoreWebApp\\RestAPI\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\004483659\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AMD\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -80,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
