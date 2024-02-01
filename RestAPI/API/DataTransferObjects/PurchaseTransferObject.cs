@@ -33,4 +33,11 @@
         public int? PurchaseId { get; set; }
         public int? ProductId { get; set; }
     }
+    public class FilterPurchaseDTO
+    {
+        public DateTime? DateFrom { get; set; }
+        public DateTime? DateTo { get; set; }
+        public decimal? TotalFrom { get; set; }
+        public decimal? TotalTo { get; set; }
+    }
 }
