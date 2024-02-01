@@ -9,6 +9,7 @@ namespace API.Mappers
         public PurchaseMapper() 
         {
             CreateMap<Purchase, GetPurchaseDTO>();
+            CreateMap<InsertPurchaseDTO, Purchase>();
         }
     }
 }

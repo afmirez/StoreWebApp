@@ -21,6 +21,7 @@ builder.Services.AddScoped<IPurchaseService, PurchaseService>();
 
 //VALIDATORS
 builder.Services.AddScoped<IProductValidator, ProductValidator>();
+builder.Services.AddScoped<IPurchaseValidator, PurchaseValidator>();
 
 var app = builder.Build();
 app.UseHttpsRedirection();
