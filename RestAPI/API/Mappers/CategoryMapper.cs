@@ -1,4 +1,5 @@
-﻿using API.Data.Models;
+﻿using API.Data.Filters;
+using API.Data.Models;
 using API.DataTransferObjects;
 using AutoMapper;
 namespace API.Mappers
@@ -8,6 +9,8 @@ namespace API.Mappers
         public CategoryMapper()
         {
             CreateMap<Category, GetCategoryDTO>();
+            CreateMap<InsertUpdateCategoryDTO, Category>();
+            CreateMap<FilterCategoryDTO, CategoryListFilter>();
         }
     }
 }
