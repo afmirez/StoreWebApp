@@ -4081,11 +4081,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\004483659\\Desktop\\CodeMindsStoreApp\\RestAPI\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\004483659\\Desktop\\StoreWebApp\\RestAPI\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\004483659\\Desktop\\CodeMindsStoreApp\\RestAPI\\API\\API.csproj",
+      "projectPath": "C:\\Users\\004483659\\Desktop\\StoreWebApp\\RestAPI\\API\\API.csproj",
       "packagesPath": "C:\\Users\\004483659\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\004483659\\Desktop\\CodeMindsStoreApp\\RestAPI\\API\\obj\\",
+      "outputPath": "C:\\Users\\004483659\\Desktop\\StoreWebApp\\RestAPI\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\004483659\\AppData\\Roaming\\NuGet\\NuGet.Config",

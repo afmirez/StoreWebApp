@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N3MaK4cd6aH1jTUUuPxWsSqcW9d9D2x13ikCHMcFlqLB57ZsK1svRGxkupblehv8arnZogta9LhWdokPJ+6RwQ==",
+  "dgSpecHash": "4rMXJ34fIKKHQ0eHvrDgsBTH7Rp4rzTO0jOER8RA1gIQIffhYUikwtbFCp+WdJHxg+IHcaE3z0msWyATWjUc5w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\004483659\\Desktop\\CodeMindsStoreApp\\RestAPI\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\004483659\\Desktop\\StoreWebApp\\RestAPI\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\004483659\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\004483659\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
