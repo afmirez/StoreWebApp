@@ -87,7 +87,6 @@ BEGIN
 	CREATE TABLE [PurchaseProduct] (
 	Id INT NOT NULL IDENTITY(1,1),
 	[Quantity] INT NOT NULL,
-	[TotalPrice] DECIMAL(10,2) NOT NULL,
 	[PurchaseId] INT NOT NULL,
 	[ProductId] INT NOT NULL,
 	CONSTRAINT PKPurchaseProduct PRIMARY KEY (Id),
