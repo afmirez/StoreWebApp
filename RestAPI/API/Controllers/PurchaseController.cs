@@ -31,7 +31,7 @@ namespace API.Controllers
         {
             PurchaseListFilter filter = this._mapper.Map<FilterPurchaseDTO, PurchaseListFilter>(data);
 
-            List<Purchase > list = await this._purchaseService.ListPurchases(filter)
+            List<Purchase> list = await this._purchaseService.ListPurchases(filter)
                                     .OrderBy(p => p.Id)
                                     .ToListAsync();
 

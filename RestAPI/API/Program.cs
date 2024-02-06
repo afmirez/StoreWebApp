@@ -18,10 +18,12 @@ builder.Services.AddDbContext<StoreDB>();
 //SERVICES
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IPurchaseService, PurchaseService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 //VALIDATORS
 builder.Services.AddScoped<IProductValidator, ProductValidator>();
 builder.Services.AddScoped<IPurchaseValidator, PurchaseValidator>();
+builder.Services.AddScoped<ICategoryValidator, CategoryValidator>();
 
 var app = builder.Build();
 app.UseHttpsRedirection();

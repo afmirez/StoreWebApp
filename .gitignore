@@ -482,3 +482,4 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+RestAPI/API/obj/Debug/net8.0/API.assets.cache
