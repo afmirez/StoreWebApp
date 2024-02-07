@@ -19,6 +19,8 @@ builder.Services.AddDbContext<StoreDB>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IPurchaseService, PurchaseService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ICategoryStateService, CategoryStateService>();
+builder.Services.AddScoped<IProductStateServie, ProductStateService>();
 
 //VALIDATORS
 builder.Services.AddScoped<IProductValidator, ProductValidator>();
