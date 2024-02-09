@@ -1,0 +1,36 @@
+@import './assets/css/reset.css';
+@import './assets/css/theme-light.css';
+@import './assets/css/theme-dark.css';
+@import './assets/css/grid.css';
+@import './assets/css/form.css';
+@import './assets/css/table.css';
+@import './assets/css/button.css';
+@import './assets/css/modal.css';
+@import './assets/css/panel.css';
+
+/* STRUCTURE */
+html {
+    font-size: 10px;
+    height: 100%;
+ }
+
+ body {
+    font-size: 1.4rem;
+    font-family: var(--font-main);
+    background: var(--color-background);
+    color: var(--color-text);
+    height: 100%;
+    overflow: hidden;
+ }
+
+ h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+ }
+
+ h2 {
+    font-size: 3.3rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+ }
