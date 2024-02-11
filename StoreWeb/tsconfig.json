@@ -23,10 +23,10 @@
       "dom"
     ],
     "paths": {
-      "@products/*":["src/app/modules/products/*"],
-      "@services/*":["src/app/services/*"],
       "@shared/*":["src/app/modules/shared/*"],
-      "@orders/*":["src/app/modules/orders/*"]
+      "@orders/*":["src/app/modules/orders/*"],
+      "@products/*":["src/app/modules/products/*"],
+      "@services/*":["src/app/services/*"]
     }
   },
   "angularCompilerOptions": {

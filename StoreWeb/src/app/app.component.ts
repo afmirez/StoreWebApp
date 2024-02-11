@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LayoutService } from './services/layout/layout.service';
+import { LayoutService } from '@services/layout/layout.service';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +12,8 @@ export class AppComponent implements OnInit {
   ){}
 
   public ngOnInit(): void {
-    this.layoutService.theme$.subscribe((theme) => {
-        document.body.className = theme;
-    });
+   this.layoutService.theme$.subscribe((theme) => {
+    document.body.className = theme;
+   });
   }
 }

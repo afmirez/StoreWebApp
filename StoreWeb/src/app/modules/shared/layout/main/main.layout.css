@@ -65,7 +65,7 @@
 
  .sidenav {
     float: left;
-    width: 25rem;
+    width: 20rem;
     background: var(--color-sidenav);
     color: var(--color-sidenav-text);
     height: 100%;
@@ -117,12 +117,13 @@
  .sidenav .menu li:hover,
  .sidenav .menu li.active {
     border-right: 0.4rem solid var( --color-main);
+    color: var(--color-text);
     background: var(--color-sidenav-active);
  }
 
  main {
     float: left;
-    width: calc(100% - 25rem);
+    width: calc(100% - 20rem);
     height: 100%;
     overflow: auto;
     padding: 2rem;

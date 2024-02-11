@@ -3,10 +3,10 @@
 @import './assets/css/theme-dark.css';
 @import './assets/css/grid.css';
 @import './assets/css/form.css';
+@import './assets/css/panel.css';
 @import './assets/css/table.css';
 @import './assets/css/button.css';
 @import './assets/css/modal.css';
-@import './assets/css/panel.css';
 
 /* STRUCTURE */
 html {

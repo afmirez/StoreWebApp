@@ -28,9 +28,9 @@ body.dark {
  
  
     /* ALERT COLORS */
-    --color-success-primary: #4ca8a7;
-    --color-success-secondary: #307676;
-    --color-success-tertiary: #428d8c;
+    --color-success-primary: #24176e;
+    --color-success-secondary: #24176e;
+    --color-success-tertiary: #4d57dc;
     --color-danger-primary: #b6446a;
     --color-danger-secondary: #75243f;
     --color-danger-tertiary: #9b3a5a;

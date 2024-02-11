@@ -3,10 +3,10 @@ body.light {
     --font-main: 'Roboto', Helvetica, sans-serif;
     --color-navbar: #e8e8e8;
     --color-navbar-menu-hover: rgba(0, 0, 0, 0.1);
-    --color-sidenav: #292929;
+    --color-sidenav: #24176e;
     --color-sidenav-text: #fff;
     --color-sidenav-category: #313131;
-    --color-sidenav-active: #4d4d4d;
+    --color-sidenav-active: #d8d8d8;
  
     /* MAIN COLORS */
     --color-main: #cc2c2c;
@@ -27,9 +27,9 @@ body.light {
     --color-form-field-option: #f1f1f1;
  
     /* ALERT COLORS */
-    --color-success-primary: #4ca8a7;
+    --color-success-primary: #24176e;
     --color-success-secondary: #307676;
-    --color-success-tertiary: #428d8c;
+    --color-success-tertiary: #4d57dc;
     --color-danger-primary: #b6446a;
     --color-danger-secondary: #75243f;
     --color-danger-tertiary: #9b3a5a;
