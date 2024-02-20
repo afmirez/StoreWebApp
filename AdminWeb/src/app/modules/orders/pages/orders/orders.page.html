@@ -46,18 +46,18 @@
     </section>
     <section class="panel slim table with-controls">
         <div class="controls">
-        <button class="button success">Nueva Orden</button>
+        <button (click)="openModal()" class="button success">Nueva Orden</button>
         </div>
         <table>
             <thead>
                 <tr>
-                <th style="width: 18%;">Fecha</th> 
-                <th style="width: 10%;">Total</th> 
-                <th style="width: 10%;">Document Id</th>
-                <th style="width: 15%;">Name</th> 
-                <th style="width: 10%;">Phone</th> 
-                <th style="width: 15%;">Email</th>
-                <th style="width: 3%;">Address</th>
+                <th style="width: 150%;">Fecha</th> 
+                <th style="width: 100%;">Total</th> 
+                <th style="width: 100%;">Document Id</th>
+                <th style="width: 100%;">Name</th> 
+                <th style="width: 100%;">Phone</th> 
+                <th style="width: 150%;">Email</th>
+                <th style="width: 100%;">Address</th>
                 <th style="width: 200%;"></th>
                 </tr> 
             </thead>
@@ -71,7 +71,7 @@
                     <td>perico_gmail.com</td>
                     <td>Puntarenas, CR</td>
                     <td class="buttons">
-                        <button class="button success">Edit</button>
+                        <button (click)="openEdit()" class="button success">Edit</button>
                         <button class="button danger">Delete</button>
                     </td>
                     <td class="mobile">
@@ -241,9 +241,52 @@
         </table>
     </section>
 </section>  
-<div class="modal small">
+<div class="modal small" #modal>
     <div class="content">
         <h2>Nueva Order</h2>
+        <form>
+            <div class="form-field">
+                <label class="label">Fecha</label>
+                <input type="datetime-local">
+            </div>
+            <div class="form-field">
+                <label>Id</label>
+                <input type="text" placeholder="">
+            </div>
+            <div class="form-field">
+                <label>DocumentId</label>
+                <input type="text" placeholder="">
+            </div>
+            <div class="form-field">
+                <label>Name</label>
+                <input type="text" placeholder="">
+            </div>
+            <div class="form-field">
+                <label>Telefono</label>
+                <input type="text" placeholder="">
+            </div>
+            <div class="form-field">
+                <label>Email</label>
+                <input type="text" placeholder="">
+            </div>
+            <div class="form-field">
+                <label>Direccion</label>
+                <input type="text" placeholder="">
+            </div>
+            <div class="form-field">
+                <label>Total</label>
+                <input type="text" placeholder="">
+            </div>
+            <div class="form-feild">
+                <button class="button success">Guardar</button>
+                <button (click)="closeModal()"class="button danger">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal small" #edit>
+    <div class="content">
+        <h2>Editar Order</h2>
         <form>
             <div class="form-field">
                 <label class="label">Fecha</label>
@@ -278,8 +321,8 @@
                 <input type="text" placeholder="$00.00">
             </div>
             <div class="form-feild">
-                <button class="button success">Gaurdar</button>
-                <button class="button danger">Cancelar</button>
+                <button class="button success">Guardar</button>
+                <button (click)="closeEdit()"class="button danger">Cancelar</button>
             </div>
         </form>
     </div>

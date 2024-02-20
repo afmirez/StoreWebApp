@@ -1,5 +1,5 @@
 <section>
-    <h1>Producto</h1>
+    <h1>Categoria</h1>
     <section class="panel">
         <h3 class="title toggle open">B&uacute;squeda</h3>
         <form name="filter" class="row open toggle-section">
@@ -9,28 +9,7 @@
             </div>
             <div class="form-field col col-4">
                 <label class="label">Nombre</label>
-                <input type="text" placeholder="Carlos Berrocal">
-            </div>
-            <div class="form-field col col-4">
-                <label class="label">Descripcion</label>
-                <input type="text" placeholder="camiseta deportiva">
-            </div>
-            <div class="form-field col col-4">
-                <label>Stock</label>
-                <input type="text" placeholder="5">
-            </div>
-            <div class="form-field col col-4">
-                <label>Precio</label>
-                <input type="text" placeholder="$00.00">
-            </div>
-            <div class="form-field col col-4">
-                <label>Category</label>
-                <select>
-                    <option value="">Todos</option>
-                    <option value="1">Ropa</option>
-                    <option value="2">Calzado</option>
-                    <option value="3">Trajes de bano</option>
-                 </select>
+                <input type="text" placeholder="Active">
             </div>
             <div class="form-field col col-4">
                 <label>State</label>
@@ -46,29 +25,21 @@
     </section>
     <section class="panel slim table with-controls">
         <div class="controls">
-        <button (click)="openModal()"class="button success">Nuevo Producto</button>
+        <button (click)="openModal()" class="button success">Nueva Categoria</button>
         </div>
         <table>
             <thead>
                 <tr>
                 <th style="width: 110%;">Id</th> 
                 <th style="width: 100%;">Name</th> 
-                <th style="width: 150%;">Description</th> 
-                <th style="width: 100%;">Stock</th>
-                <th style="width: 100%;">Price</th> 
-                <th style="width: 100%;">Category</th> 
-                <th style="width: 100%;">State</th>
+                <th style="width: 100;">State</th>
                 <th style="width: 200%;"></th>
                 </tr> 
             </thead>
             <tbody>
                 <tr>
                     <td>SKU45789634</td>
-                    <td>Jeans</td>
-                    <td>Pantalon jeans marca Levis</td>
-                    <td>3</td>
-                    <td>$30.00</td>
-                    <td>Ropa</td>
+                    <td>Active</td>
                     <td>Activo</td>
                     <td class="buttons">
                         <button (click)="openEdit()" class="button success">Edit</button>
@@ -81,11 +52,7 @@
                         </div>
                         <p class="data">
                             <label class="label">Nombre</label>
-                            <span>Carlos Arias</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Precio</label>
-                            <span>$30.00</span>
+                            <span>Active</span>
                         </p>
                         <p class="data">
                             <label class="label">Estado</label>
@@ -99,11 +66,7 @@
                 </tr>
                 <tr>
                     <td>SKU45789634</td>
-                    <td>Jeans</td>
-                    <td>Pantalon jeans marca Levis</td>
-                    <td>3</td>
-                    <td>$30.00</td>
-                    <td>Ropa</td>
+                    <td>Active</td>
                     <td>Activo</td>
                     <td class="buttons">
                         <button class="button success">Edit</button>
@@ -116,11 +79,33 @@
                         </div>
                         <p class="data">
                             <label class="label">Nombre</label>
-                            <span>Carlos Arias</span>
-                        </p>
+                            <span>Active</span>
                         <p class="data">
-                            <label class="label">Precio</label>
-                            <span>$30.00</span>
+                            <label class="label">Estado</label>
+                            <span>Activo</span>
+                        </p>
+                        <div class="buttons">
+                            <button class="button success">Edit</button>
+                            <button class="button danger">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>SKU45789634</td>
+                    <td>Active</td>
+                    <td>Activo</td>
+                    <td class="buttons">
+                        <button class="button success">Edit</button>
+                        <button class="button danger">Delete</button>
+                    </td>
+                    <td class="mobile">
+                        <div class="heading">
+                            <h3>SKU45789634</h3>
+                            <label class="label">Id</label>
+                        </div>
+                        <p class="data">
+                            <label class="label">Nombre</label>
+                            <span>Active</span>
                         </p>
                         <p class="data">
                             <label class="label">Estado</label>
@@ -134,11 +119,7 @@
                 </tr>
                 <tr>
                     <td>SKU45789634</td>
-                    <td>Jeans</td>
-                    <td>Pantalon jeans marca Levis</td>
-                    <td>3</td>
-                    <td>$30.00</td>
-                    <td>Ropa</td>
+                    <td>Active</td>
                     <td>Activo</td>
                     <td class="buttons">
                         <button class="button success">Edit</button>
@@ -151,11 +132,7 @@
                         </div>
                         <p class="data">
                             <label class="label">Nombre</label>
-                            <span>Carlos Arias</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Precio</label>
-                            <span>$30.00</span>
+                            <span>Active</span>
                         </p>
                         <p class="data">
                             <label class="label">Estado</label>
@@ -169,11 +146,7 @@
                 </tr>
                 <tr>
                     <td>SKU45789634</td>
-                    <td>Jeans</td>
-                    <td>Pantalon jeans marca Levis</td>
-                    <td>3</td>
-                    <td>$30.00</td>
-                    <td>Ropa</td>
+                    <td>Active</td>
                     <td>Activo</td>
                     <td class="buttons">
                         <button class="button success">Edit</button>
@@ -186,46 +159,7 @@
                         </div>
                         <p class="data">
                             <label class="label">Nombre</label>
-                            <span>Carlos Arias</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Precio</label>
-                            <span>$30.00</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Estado</label>
-                            <span>Activo</span>
-                        </p>
-                        <div class="buttons">
-                            <button class="button success">Edit</button>
-                            <button class="button danger">Delete</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>SKU45789634</td>
-                    <td>Jeans</td>
-                    <td>Pantalon jeans marca Levis</td>
-                    <td>3</td>
-                    <td>$30.00</td>
-                    <td>Ropa</td>
-                    <td>Activo</td>
-                    <td class="buttons">
-                        <button class="button success">Edit</button>
-                        <button class="button danger">Delete</button>
-                    </td>
-                    <td class="mobile">
-                        <div class="heading">
-                            <h3>SKU45789634</h3>
-                            <label class="label">Id</label>
-                        </div>
-                        <p class="data">
-                            <label class="label">Nombre</label>
-                            <span>Carlos Arias</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Precio</label>
-                            <span>$30.00</span>
+                            <span>Active</span>
                         </p>
                         <p class="data">
                             <label class="label">Estado</label>
@@ -243,7 +177,7 @@
 </section>  
 <div class="modal small" #modal>
     <div class="content">
-        <h2>Nuevo Producto</h2>
+        <h2>Nueva Categoria</h2>
         <form>
             <div class="form-field">
                 <label class="label">Id</label>
@@ -252,27 +186,6 @@
             <div class="form-field">
                 <label>Name</label>
                 <input type="text" placeholder="">
-            </div>
-            <div class="form-field">
-                <label>Description</label>
-                <input type="text" placeholder="r">
-            </div>
-            <div class="form-field">
-                <label>Stock</label>
-                <input type="text" placeholder="">
-            </div>
-            <div class="form-field">
-                <label>Price</label>
-                <input type="text" placeholder="">
-            </div>
-            <div class="form-field col col-4">
-                <label>Category</label>
-                <select>
-                    <option value=""></option>
-                    <option value="1">Ropa</option>
-                    <option value="2">Calzado</option>
-                    <option value="3">Trajes de bano</option>
-                 </select>
             </div>
             <div class="form-feild col col-1">
                 <button class="button success">Guardar</button>
@@ -283,7 +196,7 @@
 </div>
 <div class="modal small" #edit>
     <div class="content">
-        <h2>Editar Producto</h2>
+        <h2>Editar Categoria</h2>
         <form>
             <div class="form-field">
                 <label class="label">Id</label>
@@ -291,27 +204,7 @@
             </div>
             <div class="form-field">
                 <label>Name</label>
-                <input type="text" placeholder="Jeans">
-            </div>
-            <div class="form-field">
-                <label>Description</label>
-                <input type="text" placeholder="Pantalon de Mujer">
-            </div>
-            <div class="form-field">
-                <label>Stock</label>
-                <input type="text" placeholder="12">
-            </div>
-            <div class="form-field">
-                <label>Price</label>
-                <input type="text" placeholder="$30.00">
-            </div>
-            <div class="form-field col col-4">
-                <label>Category</label>
-                <select>
-                    <option value="1">Ropa</option>
-                    <option value="2">Calzado</option>
-                    <option value="3">Trajes de bano</option>
-                 </select>
+                <input type="text" placeholder="Active">
             </div>
             <div class="form-feild col col-1">
                 <button class="button success">Guardar</button>

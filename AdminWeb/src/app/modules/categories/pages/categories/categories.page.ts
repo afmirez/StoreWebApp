@@ -1,11 +1,11 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild  } from '@angular/core';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.page.html',
-  styleUrls: ['./products.page.css']
+  selector: 'app-categories',
+  templateUrl: './categories.page.html',
+  styleUrls: ['./categories.page.css']
 })
-export class ProductsPage {
+export class CategoriesPage {
   @ViewChild("modal") modal: ElementRef
 
   public openModal(){
@@ -15,6 +15,7 @@ export class ProductsPage {
   public closeModal(){
     this.modal.nativeElement.classList.remove("open")
   }
+
   @ViewChild("edit") edit: ElementRef
 
   public openEdit(){
