@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(./assets/css/reset.css);
+@import 'ngx-toastr/toastr';
+
+:root {
+    --clr-main: #4b33a8;
+    --clr-main-light: #785ce9;
+    --clr-white: #ececec;
+    --clr-gray: #e2e2e2;
+    --clr-red: #961818;
+    --custom-shadow-box : 0px 0px 6px 3px rgba(166,164,164,0.75);;
+    --custom-webkit-box-shadow: 0px 0px 6px 3px rgba(166,164,164,0.75);;
+    --custom-box-shadow: 0px 0px 6px 3px rgba(166,164,164,0.75);
+}
+
+.custom-toast {
+    background-color: var(--clr-main-light); 
+    color: var(--clr-white); 
+    font-family: 'Rubik', Helvetica, sans-serif;
+    font-size: 1rem;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+  }
+
+  .custom-toast-success {
+    background-color: #28a745; 
+  }
+
+  .my-swal-container {
+    font-family: 'Rubik', Helvetica, sans-serif;
+  }
+
+  .toast-top-center {
+    top: 3%;
+    right: 2%; 
+    width: 30%;
+    transform: translateX(0%); 
+  }

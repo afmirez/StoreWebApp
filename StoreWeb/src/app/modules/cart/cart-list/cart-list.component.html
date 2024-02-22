@@ -1,0 +1,69 @@
+<h2 class="cart-title">Carrito</h2>
+
+<p class="empty-cart" [ngClass]="{'disabled': fullPurchase.PurchaseProductData.length > 0}">Tu carrito está vacío. <i class="bi bi-emoji-frown"></i></p>
+
+<div class="cart-container" [ngClass]="{'disabled': fullPurchase.PurchaseProductData.length === 0}">
+    <div class="client-info-container">
+        <form [formGroup]="purchaseForm">
+            <input type="text" placeholder="Tu Nombre" formControlName="customerName">
+            <small class="text-danger" *ngIf="purchaseForm.get('customerName')?.hasError('required') && purchaseForm.get('customerName')?.touched">
+              Nombre es requerido
+            </small>
+        
+            <input type="text" placeholder="Tu Correo" formControlName="customerEmail">
+            <small class="text-danger" *ngIf="purchaseForm.get('customerEmail')?.hasError('required') && purchaseForm.get('customerEmail')?.touched">
+              Correo es requerido
+            </small>
+        
+            <input type="text" placeholder="Tu Cedula" formControlName="customerDocumentId">
+            <small class="text-danger" *ngIf="purchaseForm.get('customerDocumentId')?.hasError('required') && purchaseForm.get('customerDocumentId')?.touched">
+              Cedula es requerida
+            </small>
+        
+            <input type="text" placeholder="Tu telf" formControlName="customerPhone">
+            <small class="text-danger" *ngIf="purchaseForm.get('customerPhone')?.hasError('required') && purchaseForm.get('customerPhone')?.touched">
+              Teléfono es requerido
+            </small>
+        
+            <input type="text" placeholder="Tu direccion" formControlName="customerAddress">
+            <small class="text-danger" *ngIf="purchaseForm.get('customerAddress')?.hasError('required') && purchaseForm.get('customerAddress')?.touched">
+              Dirección es requerida
+            </small>
+          </form>
+    </div>
+
+    <div class="cart-products-container">
+        <div class="cart-product" *ngFor="let item of fullPurchase.PurchaseProductData">
+            <img class="cart-product-img" src="../../../assets/img/01.jpg" alt="Abrigo 01">
+            <div class="cart-product-title">
+                <small>Producto</small>
+                <h3>{{item.ProductId}}</h3>
+            </div>
+            <div class="cart-product-amount">
+                <small>Cantidad</small>
+                <p>{{item.Quantity}}</p>
+            </div>
+            <!-- <div class="cart-product-price">
+                <small>Precio</small>
+                <p>{{item.TotalPrice}}</p>
+            </div> -->
+            <div class="cart-product-subtotal">
+                <small>Subtotal</small>
+                <p>{{item.TotalPrice}}</p>
+            </div>
+            <button (click)="removeItemFromCart(item.ProductId)" class="cart-product-delete" id="abrigo-01"><i class="bi bi-trash-fill"></i></button>
+        </div>
+
+    <div class="cart-actions">
+        <div class="cart-actions-left">
+            <button class="cart-actions-empty" (click)="confirmEmptyCart()">Vaciar carrito</button>
+        </div>
+        <div class="cart-actions-right">
+            <div class="cart-actions-total">
+                <p>Total:</p>
+                <p>{{ fullPurchase.PurchaseData.Total | currency:'USD' }}</p>
+            </div>
+            <button class="cart-actions-order" (click)="createPurchase()" [disabled]="!purchaseForm.valid" [ngClass]="{'darker-button': !purchaseForm.valid}">Comprar ahora</button>
+        </div>
+    </div>
+</div>
