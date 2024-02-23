@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { OrdersRoutingModule } from './orders-routing.module';
-import { OrdersPage } from './pages/orders/orders.page';
 import { FormsModule } from '@angular/forms';
+import { CategoriesRoutingModule } from './categories-routing.module';
+import { CategoriesPage } from './pages/categories/categories.page';
 
 
 @NgModule({
   declarations: [
-    OrdersPage
+    CategoriesPage
   ],
   imports: [
     CommonModule,
-    OrdersRoutingModule,
+    CategoriesRoutingModule,
     FormsModule
   ]
 })
-export class OrdersModule { }
+export class CategoriesModule { }
