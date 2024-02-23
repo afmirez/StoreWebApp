@@ -46,34 +46,30 @@
     </section>
     <section class="panel slim table with-controls">
         <div class="controls">
-        <button (click)="openModal()" class="button success">Nueva Orden</button>
+            <button (click)="openModal()" class="button success">Nueva Orden</button>
         </div>
         <table>
             <thead>
                 <tr>
-                <th style="width: 150%;">Fecha</th> 
-                <th style="width: 100%;">Total</th> 
-                <th style="width: 100%;">Document Id</th>
-                <th style="width: 100%;">Name</th> 
-                <th style="width: 100%;">Phone</th> 
-                <th style="width: 150%;">Email</th>
-                <th style="width: 100%;">Address</th>
-                <th style="width: 200%;"></th>
-                </tr> 
+                    <th style="width: 150%;">Fecha</th>
+                    <th style="width: 100%;">Total</th>
+                    <th style="width: 100%;">Document Id</th>
+                    <th style="width: 100%;">Name</th>
+                    <th style="width: 100%;">Phone</th>
+                    <th style="width: 150%;">Email</th>
+                    <th style="width: 100%;">Address</th>
+                    <th style="width: 200%;"></th>
+                </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>21/02/2022 12:35:00</td>
-                    <td>$30.00</td>
-                    <td>214853694</td>
-                    <td>Carlos Arias</td>
-                    <td>89456323</td>
-                    <td>perico_gmail.com</td>
-                    <td>Puntarenas, CR</td>
-                    <td class="buttons">
-                        <button (click)="openEdit()" class="button success">Edit</button>
-                        <button class="button danger">Delete</button>
-                    </td>
+                <tr *ngFor="let order of orders">
+                    <td>{{order.date | date: 'dd/MM/yyyy hh:mm a' }}</td>
+                    <td>${{order.total}}</td>
+                    <td>{{order.id}}</td>
+                    <td>{{order.customerName}}</td>
+                    <td>{{order.customerPhone}}</td>
+                    <td>{{order.customerEmail}}</td>
+                    <td>{{order.customerAddress}}</td>
                     <td class="mobile">
                         <div class="heading">
                             <h3>SKU45789634</h3>
@@ -91,239 +87,94 @@
                             <label class="label">Telefono</label>
                             <span>89456323</span>
                         </p>
-                        <div class="buttons">
-                            <button class="button success">Edit</button>
-                            <button class="button danger">Delete</button>
-                        </div>
                     </td>
                 </tr>
-                <tr>
-                    <td>21/02/2022 12:35:00</td>
-                    <td>$30.00</td>
-                    <td>214853694</td>
-                    <td>Carlos Arias</td>
-                    <td>89456323</td>
-                    <td>perico_gmail.com</td>
-                    <td>Puntarenas, CR</td>
-                    <td class="buttons">
-                        <button class="button success">Edit</button>
-                        <button class="button danger">Delete</button>
-                    </td>
-                    <td class="mobile">
-                        <div class="heading">
-                            <h3>SKU45789634</h3>
-                            <label class="label">Id</label>
-                        </div>
-                        <p class="data">
-                            <label class="label">Precio</label>
-                            <span>$30.00</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Nombre</label>
-                            <span>Carlos Arias</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Telefono</label>
-                            <span>89456323</span>
-                        </p>
-                        <div class="buttons">
-                            <button class="button success">Edit</button>
-                            <button class="button danger">Delete</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>21/02/2022 12:35:00</td>
-                    <td>$30.00</td>
-                    <td>214853694</td>
-                    <td>Carlos Arias</td>
-                    <td>89456323</td>
-                    <td>perico_gmail.com</td>
-                    <td>Puntarenas, CR</td>
-                    <td class="buttons">
-                        <button class="button success">Edit</button>
-                        <button class="button danger">Delete</button>
-                    </td>
-                    <td class="mobile">
-                        <div class="heading">
-                            <h3>SKU45789634</h3>
-                            <label class="label">Id</label>
-                        </div>
-                        <p class="data">
-                            <label class="label">Precio</label>
-                            <span>$30.00</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Nombre</label>
-                            <span>Carlos Arias</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Telefono</label>
-                            <span>89456323</span>
-                        </p>
-                        <div class="buttons">
-                            <button class="button success">Edit</button>
-                            <button class="button danger">Delete</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>21/02/2022 12:35:00</td>
-                    <td>$30.00</td>
-                    <td>214853694</td>
-                    <td>Carlos Arias</td>
-                    <td>89456323</td>
-                    <td>perico_gmail.com</td>
-                    <td>Puntarenas, CR</td>
-                    <td class="buttons">
-                        <button class="button success">Edit</button>
-                        <button class="button danger">Delete</button>
-                    </td>
-                    <td class="mobile">
-                        <div class="heading">
-                            <h3>SKU45789634</h3>
-                            <label class="label">Id</label>
-                        </div>
-                        <p class="data">
-                            <label class="label">Precio</label>
-                            <span>$30.00</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Nombre</label>
-                            <span>Carlos Arias</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Telefono</label>
-                            <span>89456323</span>
-                        </p>
-                        <div class="buttons">
-                            <button class="button success">Edit</button>
-                            <button class="button danger">Delete</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>21/02/2022 12:35:00</td>
-                    <td>$30.00</td>
-                    <td>214853694</td>
-                    <td>Carlos Arias</td>
-                    <td>89456323</td>
-                    <td>perico_gmail.com</td>
-                    <td>Puntarenas, CR</td>
-                    <td class="buttons">
-                        <button class="button success">Edit</button>
-                        <button class="button danger">Delete</button>
-                    </td>
-                    <td class="mobile">
-                        <div class="heading">
-                            <h3>SKU45789634</h3>
-                            <label class="label">Id</label>
-                        </div>
-                        <p class="data">
-                            <label class="label">Precio</label>
-                            <span>$30.00</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Nombre</label>
-                            <span>Carlos Arias</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Telefono</label>
-                            <span>89456323</span>
-                        </p>
-                        <div class="buttons">
-                            <button class="button success">Edit</button>
-                            <button class="button danger">Delete</button>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-</section>  
-<div class="modal small" #modal>
-    <div class="content">
-        <h2>Nueva Order</h2>
-        <form>
-            <div class="form-field">
-                <label class="label">Fecha</label>
-                <input type="datetime-local">
-            </div>
-            <div class="form-field">
-                <label>Id</label>
-                <input type="text" placeholder="">
-            </div>
-            <div class="form-field">
-                <label>DocumentId</label>
-                <input type="text" placeholder="">
-            </div>
-            <div class="form-field">
-                <label>Name</label>
-                <input type="text" placeholder="">
-            </div>
-            <div class="form-field">
-                <label>Telefono</label>
-                <input type="text" placeholder="">
-            </div>
-            <div class="form-field">
-                <label>Email</label>
-                <input type="text" placeholder="">
-            </div>
-            <div class="form-field">
-                <label>Direccion</label>
-                <input type="text" placeholder="">
-            </div>
-            <div class="form-field">
-                <label>Total</label>
-                <input type="text" placeholder="">
-            </div>
-            <div class="form-feild">
-                <button class="button success">Guardar</button>
-                <button (click)="closeModal()"class="button danger">Cancelar</button>
-            </div>
-        </form>
-    </div>
-</div>
-<div class="modal small" #edit>
-    <div class="content">
-        <h2>Editar Order</h2>
-        <form>
-            <div class="form-field">
-                <label class="label">Fecha</label>
-                <input type="datetime-local">
-            </div>
-            <div class="form-field">
-                <label>Id</label>
-                <input type="text" placeholder="123456789">
-            </div>
-            <div class="form-field">
-                <label>DocumentId</label>
-                <input type="text" placeholder="123456789">
-            </div>
-            <div class="form-field">
-                <label>Name</label>
-                <input type="text" placeholder="Camisa deportiva">
-            </div>
-            <div class="form-field">
-                <label>Telefono</label>
-                <input type="text" placeholder="123456789">
-            </div>
-            <div class="form-field">
-                <label>Email</label>
-                <input type="text" placeholder="123456789">
-            </div>
-            <div class="form-field">
-                <label>Direccion</label>
-                <input type="text" placeholder="123456789">
-            </div>
-            <div class="form-field">
-                <label>Total</label>
-                <input type="text" placeholder="$00.00">
-            </div>
-            <div class="form-feild">
-                <button class="button success">Guardar</button>
-                <button (click)="closeEdit()"class="button danger">Cancelar</button>
-            </div>
-        </form>
-    </div>
-</div>
+
+                <div class="modal small" #modal>
+                    <div class="content">
+                        <h2>Nueva Order</h2>
+                        <form (ngSubmit)="createOrder()">
+                            <div class="form-field">
+                                <label class="label">Fecha</label>
+                                <input type="datetime-local" name="date" [(ngModel)]="orderVariable.date">
+                            </div>
+                            <div class="form-field">
+                                <label>DocumentId</label>
+                                <input type="text" placeholder="" name="documentId"
+                                    [(ngModel)]="orderVariable.customerDocumentId">
+                            </div>
+                            <div class="form-field">
+                                <label>Name</label>
+                                <input type="text" placeholder="" name="name" [(ngModel)]="orderVariable.customerName">
+                            </div>
+                            <div class="form-field">
+                                <label>Telefono</label>
+                                <input type="text" placeholder="" name="phone"
+                                    [(ngModel)]="orderVariable.customerPhone">
+                            </div>
+                            <div class="form-field">
+                                <label>Email</label>
+                                <input type="text" placeholder="" name="email"
+                                    [(ngModel)]="orderVariable.customerEmail">
+                            </div>
+                            <div class="form-field">
+                                <label>Direccion</label>
+                                <input type="text" placeholder="" name="Address"
+                                    [(ngModel)]="orderVariable.customerAddress">
+                            </div>
+                            <div class="form-field">
+                                <label>Total</label>
+                                <input type="text" placeholder="" name="total" [(ngModel)]="orderVariable.total">
+                            </div>
+                            <div class="form-field">
+                                <input class="submit" type="submit" value="Submit">
+
+                                <button class="button success">Guardar</button>
+                                <button (click)="closeModal()" class="button danger">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal small" #edit>
+                    <div class="content">
+                        <h2>Editar Order</h2>
+                        <form>
+                            <div class="form-field">
+                                <label class="label">Fecha</label>
+                                <input type="datetime-local">
+                            </div>
+                            <div class="form-field">
+                                <label>Id</label>
+                                <input type="text" placeholder="123456789">
+                            </div>
+                            <div class="form-field">
+                                <label>DocumentId</label>
+                                <input type="text" placeholder="123456789">
+                            </div>
+                            <div class="form-field">
+                                <label>Name</label>
+                                <input type="text" placeholder="Camisa deportiva">
+                            </div>
+                            <div class="form-field">
+                                <label>Telefono</label>
+                                <input type="text" placeholder="123456789">
+                            </div>
+                            <div class="form-field">
+                                <label>Email</label>
+                                <input type="text" placeholder="123456789">
+                            </div>
+                            <div class="form-field">
+                                <label>Direccion</label>
+                                <input type="text" placeholder="123456789">
+                            </div>
+                            <div class="form-field">
+                                <label>Total</label>
+                                <input type="text" placeholder="$00.00">
+                            </div>
+                            <div class="form-feild">
+                                <button class="button success">Guardar</button>
+                                <button (click)="closeEdit()" class="button danger">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>

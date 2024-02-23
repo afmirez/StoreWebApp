@@ -1,4 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { OrderApi } from 'src/app/api/order/order.api';
+import { Order } from 'src/app/api/order/order.model'; 
 
 @Component({
   selector: 'app-orders',
@@ -7,6 +9,22 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class OrdersPage {
 @ViewChild("modal") modal: ElementRef
+
+public orders: Order[] =[];
+
+public orderVariable: Order = new Order();
+
+
+constructor(
+  private orderAPI: OrderApi) { 
+}
+
+public ngOnInit(): void {
+  this.orderAPI.GetOrders().subscribe(result=>{
+  this.orders= result.data.map((order: any)=>new Order(order));
+  console.log(this.orders);
+  })
+}
 
 public openModal(){
   this.modal.nativeElement.classList.add("open")
@@ -24,4 +42,18 @@ public openEdit(){
 public closeEdit(){
   this.edit.nativeElement.classList.remove("open")
 }
+
+public createOrder(): void {
+  this.orderAPI.CreateOrder(this.orderVariable).subscribe({
+    next: (response) => {
+      console.log('Response:', response);
+      if(!response.success){
+        alert(response.messages.join('\n'));
+      }
+      else{
+      }      
+    }
+  });
+}
+
 }

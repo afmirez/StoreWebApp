@@ -62,14 +62,14 @@
                 </tr> 
             </thead>
             <tbody>
-                <tr>
-                    <td>SKU45789634</td>
-                    <td>Jeans</td>
-                    <td>Pantalon jeans marca Levis</td>
-                    <td>3</td>
-                    <td>$30.00</td>
-                    <td>Ropa</td>
-                    <td>Activo</td>
+                <tr *ngFor="let product of products">
+                    <td>{{product.id}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.description}}</td>
+                    <td>{{product.productStock}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.category.name}}</td>
+                    <td>{{product.productState.name}}</td>
                     <td class="buttons">
                         <button (click)="openEdit()" class="button success">Edit</button>
                         <button class="button danger">Delete</button>
@@ -97,150 +97,7 @@
                         </div>
                     </td>
                 </tr>
-                <tr>
-                    <td>SKU45789634</td>
-                    <td>Jeans</td>
-                    <td>Pantalon jeans marca Levis</td>
-                    <td>3</td>
-                    <td>$30.00</td>
-                    <td>Ropa</td>
-                    <td>Activo</td>
-                    <td class="buttons">
-                        <button class="button success">Edit</button>
-                        <button class="button danger">Delete</button>
-                    </td>
-                    <td class="mobile">
-                        <div class="heading">
-                            <h3>SKU45789634</h3>
-                            <label class="label">Id</label>
-                        </div>
-                        <p class="data">
-                            <label class="label">Nombre</label>
-                            <span>Carlos Arias</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Precio</label>
-                            <span>$30.00</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Estado</label>
-                            <span>Activo</span>
-                        </p>
-                        <div class="buttons">
-                            <button class="button success">Edit</button>
-                            <button class="button danger">Delete</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>SKU45789634</td>
-                    <td>Jeans</td>
-                    <td>Pantalon jeans marca Levis</td>
-                    <td>3</td>
-                    <td>$30.00</td>
-                    <td>Ropa</td>
-                    <td>Activo</td>
-                    <td class="buttons">
-                        <button class="button success">Edit</button>
-                        <button class="button danger">Delete</button>
-                    </td>
-                    <td class="mobile">
-                        <div class="heading">
-                            <h3>SKU45789634</h3>
-                            <label class="label">Id</label>
-                        </div>
-                        <p class="data">
-                            <label class="label">Nombre</label>
-                            <span>Carlos Arias</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Precio</label>
-                            <span>$30.00</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Estado</label>
-                            <span>Activo</span>
-                        </p>
-                        <div class="buttons">
-                            <button class="button success">Edit</button>
-                            <button class="button danger">Delete</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>SKU45789634</td>
-                    <td>Jeans</td>
-                    <td>Pantalon jeans marca Levis</td>
-                    <td>3</td>
-                    <td>$30.00</td>
-                    <td>Ropa</td>
-                    <td>Activo</td>
-                    <td class="buttons">
-                        <button class="button success">Edit</button>
-                        <button class="button danger">Delete</button>
-                    </td>
-                    <td class="mobile">
-                        <div class="heading">
-                            <h3>SKU45789634</h3>
-                            <label class="label">Id</label>
-                        </div>
-                        <p class="data">
-                            <label class="label">Nombre</label>
-                            <span>Carlos Arias</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Precio</label>
-                            <span>$30.00</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Estado</label>
-                            <span>Activo</span>
-                        </p>
-                        <div class="buttons">
-                            <button class="button success">Edit</button>
-                            <button class="button danger">Delete</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>SKU45789634</td>
-                    <td>Jeans</td>
-                    <td>Pantalon jeans marca Levis</td>
-                    <td>3</td>
-                    <td>$30.00</td>
-                    <td>Ropa</td>
-                    <td>Activo</td>
-                    <td class="buttons">
-                        <button class="button success">Edit</button>
-                        <button class="button danger">Delete</button>
-                    </td>
-                    <td class="mobile">
-                        <div class="heading">
-                            <h3>SKU45789634</h3>
-                            <label class="label">Id</label>
-                        </div>
-                        <p class="data">
-                            <label class="label">Nombre</label>
-                            <span>Carlos Arias</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Precio</label>
-                            <span>$30.00</span>
-                        </p>
-                        <p class="data">
-                            <label class="label">Estado</label>
-                            <span>Activo</span>
-                        </p>
-                        <div class="buttons">
-                            <button class="button success">Edit</button>
-                            <button class="button danger">Delete</button>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-</section>  
+                
 <div class="modal small" #modal>
     <div class="content">
         <h2>Nuevo Producto</h2>

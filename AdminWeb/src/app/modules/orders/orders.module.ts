@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { OrdersRoutingModule } from './orders-routing.module';
 import { OrdersPage } from './pages/orders/orders.page';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { OrdersPage } from './pages/orders/orders.page';
   ],
   imports: [
     CommonModule,
-    OrdersRoutingModule
+    OrdersRoutingModule,
+    FormsModule
   ]
 })
 export class OrdersModule { }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule } from '@angular/forms';
 import { CategoriesRoutingModule } from './categories-routing.module';
 import { CategoriesPage } from './pages/categories/categories.page';
 
@@ -11,7 +11,8 @@ import { CategoriesPage } from './pages/categories/categories.page';
   ],
   imports: [
     CommonModule,
-    CategoriesRoutingModule
+    CategoriesRoutingModule,
+    FormsModule
   ]
 })
 export class CategoriesModule { }
