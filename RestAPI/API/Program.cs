@@ -1,6 +1,7 @@
 using API;
 using API.Data;
 using API.Services;
+using API.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers()
@@ -15,13 +16,16 @@ builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddDbContext<StoreDB>();
 
 //SERVICES
-builder.Services.AddScoped<ICategoryStateService, CategoryStateService>();
-builder.Services.AddScoped<ICategoryService, CategoryService>();
-builder.Services.AddScoped<IProductStateService, ProductStateService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IPurchaseService, PurchaseService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ICategoryStateService, CategoryStateService>();
+builder.Services.AddScoped<IProductStateServie, ProductStateService>();
 
 //VALIDATORS
-
+builder.Services.AddScoped<IProductValidator, ProductValidator>();
+builder.Services.AddScoped<IPurchaseValidator, PurchaseValidator>();
+builder.Services.AddScoped<ICategoryValidator, CategoryValidator>();
 
 var app = builder.Build();
 app.UseHttpsRedirection();

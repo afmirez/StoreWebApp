@@ -1,0 +1,39 @@
+body.light {
+    /* LAYOUT */
+    --font-main: 'Roboto', Helvetica, sans-serif;
+    --color-navbar: #e8e8e8;
+    --color-navbar-menu-hover: rgba(0, 0, 0, 0.1);
+    --color-sidenav: #24176e;
+    --color-sidenav-text: #fff;
+    --color-sidenav-category: #313131;
+    --color-sidenav-active: #d8d8d8;
+ 
+    /* MAIN COLORS */
+    --color-main: #cc2c2c;
+    --color-text: #292929;
+    --color-border: #d8d8d8;
+    --color-hover-background: rgba(90, 90, 90, 0.1);
+    --color-background: #f1f1f1;
+    --color-alternate-item-background: #d6d6d6;
+    --color-shadow-dark: #1d1d1d;
+    --color-shadow-light: #adadad;
+    --color-scrollbar-dark: rgba(255, 255, 255, 0.1);
+    --color-scrollbar-light: rgba(0, 0, 0, 0.1);
+ 
+    /* FORM COLORS */
+    --color-placeholder: #adadad;
+    --color-form-field-border: #ccc;
+    --color-form-field-focus: #969696;
+    --color-form-field-option: #f1f1f1;
+ 
+    /* ALERT COLORS */
+    --color-success-primary: #24176e;
+    --color-success-secondary: #307676;
+    --color-success-tertiary: #4d57dc;
+    --color-danger-primary: #b6446a;
+    --color-danger-secondary: #75243f;
+    --color-danger-tertiary: #9b3a5a;
+    --color-neutral-primary: #afa9a9;
+    --color-neutral-secondary: #8f8c8c;
+    --color-neutral-tertiary: #8d8585;
+ }

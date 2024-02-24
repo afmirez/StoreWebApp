@@ -1,0 +1,35 @@
+<header class="navbar">
+   <button class="menu">&equiv;</button>
+   <figure>
+      <img src="/assets/img/Store.png" alt="Store"/>
+   </figure>
+   <div>
+      <button class="material-symbols-sharp" (click)="changeTheme()">{{themes[theme]}}_mode</button>
+   </div>
+</header>
+<section class="wrapper">
+   <nav class="sidenav">
+      <h3 class="category">ADMINISTRADOR</h3>
+      <ul class="menu">
+         <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink="/">
+               <span>Orders</span>
+            </a>
+         </li>
+         <li routerLinkActive="active">
+            <a routerLink="products">
+               <span>Products</span>
+            </a>
+         </li>
+         <li routerLinkActive="active">
+            <a routerLink="categories">
+               <span>Categories</span>
+            </a>
+         </li>
+      </ul>
+   </nav>
+   <main>
+      <router-outlet></router-outlet>
+   </main>
+</section>
+

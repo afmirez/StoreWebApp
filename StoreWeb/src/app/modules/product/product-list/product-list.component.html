@@ -1,0 +1,27 @@
+<div class="filter">
+  <form class="filter-container" #filterForm="ngForm">
+    <select class="filter-categories" [(ngModel)]="categoryId" name="category">
+      <option value="">Todos</option>
+      <option *ngFor="let category of categories.data" [value]="category.id">{{category.name}}</option>
+    </select>
+    <input class="filter-name" type="text"  [(ngModel)]="productName" name="productName">
+    <div class="wrapper-filter">
+      <span>From</span>
+      <input type="number" [(ngModel)]="priceFrom" name="priceFrom">
+      <span>To</span>
+      <input type="number" [(ngModel)]="priceTo" name="priceTo">
+    </div>
+    <button type="button" (click)="applyFilter()">Buscar</button>
+  </form>
+</div>
+
+<div  class="products-container">
+    <div *ngFor="let product of filteredProducts.data" class="product">
+        <img src="../../../assets/img/01.jpg" class="product-img">
+        <div class="product-details">
+          <h3 class="product-title">{{ product.name }}</h3>
+          <p class="product-price">${{ product.price }}</p>
+          <button class="product-add" (click)="addProductToCart(product)">Agregar</button>
+        </div>
+      </div>
+</div>

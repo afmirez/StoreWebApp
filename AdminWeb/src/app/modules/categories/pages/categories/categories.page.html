@@ -1,0 +1,124 @@
+<section>
+    <h1>Categoria</h1>
+    <section class="panel">
+        <h3 class="title toggle open">B&uacute;squeda</h3>
+        <form name="filter" class="row open toggle-section">
+            <div class="form-field col col-4">
+                <label>Id</label>
+                <input type="text" placeholder="SKU45789634">
+            </div>
+            <div class="form-field col col-4">
+                <label class="label">Nombre</label>
+                <input type="text" placeholder="Active">
+            </div>
+            <div class="form-field col col-4">
+                <label>State</label>
+                <select>
+                    <option value="">Active</option>
+                    <option value="1">Inactive</option>
+                </select>
+            </div>
+            <div class="form-field success col col-1">
+                <button class="button success">Buscar</button>
+            </div>
+        </form>
+    </section>
+    <section class="panel slim table with-controls">
+        <div class="controls">
+        <button (click)="openModal()" class="button success">Nueva Categoria</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                <th style="width: 110%;">Id</th> 
+                <th style="width: 100%;">Name</th> 
+                <th style="width: 100;">State</th>
+                <th style="width: 200%;"></th>
+                </tr> 
+            </thead>
+            <tbody>
+                <tr *ngFor="let category of categories">
+                    <td>{{category.id}}</td>
+                    <td>{{category.name}}</td>
+                    <td>{{category.categoryState.name}}</td>
+                    <td class="buttons">
+                        <button (click)="openEdit()" class="button success">Edit</button>
+                        <button class="button danger">Delete</button>
+                    </td>
+                    <td class="mobile">
+                        <div class="heading">
+                            <h3>SKU45789634</h3>
+                            <label class="label">Id</label>
+                        </div>
+                        <p class="data">
+                            <label class="label">Nombre</label>
+                            <span>Active</span>
+                        </p>
+                        <p class="data">
+                            <label class="label">Estado</label>
+                            <span>Activo</span>
+                        </p>
+                        <div class="buttons">
+                            <button class="button success">Edit</button>
+                            <button class="button danger">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+               
+<div class="modal small" #modal>
+    <div class="content">
+        <h2>Nueva Categoria</h2>
+        <form (ngSubmit)="createCategory()">
+            <div class="form-field">
+                <label class="label">Id</label>
+                <input type="text" name="id" placeholder="" [(ngModel)]="categoryVariable.id">
+            </div>
+            <div class="form-field">
+                <label>Name</label>
+                <input type="text" name = "name" placeholder="" [(ngModel)]="categoryVariable.name">
+            </div>
+            <div class="form-feild col col-1">
+                <input class="submit" type="submit" value="Submit">
+                <button (click)="closeModal()"class="button danger">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal small" #modal>
+    <div class="content">
+        <h2>Nueva Categoria</h2>
+        <form>
+            <div class="form-field">
+                <label class="label">Id</label>
+                <input type="text" placeholder="">
+            </div>
+            <div class="form-field">
+                <label>Name</label>
+                <input type="text" placeholder="">
+            </div>
+            <div class="form-feild col col-1">
+                <button class="button success">Guardar</button>
+                <button (click)="closeModal()"class="button danger">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal small" #edit>
+    <div class="content">
+        <h2>Editar Categoria</h2>
+        <form>
+            <div class="form-field">
+                <label class="label">Id</label>
+                <input type="text" placeholder="123456789">
+            </div>
+            <div class="form-field">
+                <label>Name</label>
+                <input type="text" placeholder="Active">
+            </div>
+            <div class="form-feild col col-1">
+                <button class="button success">Guardar</button>
+                <button (click)="closeEdit()"class="button danger">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
